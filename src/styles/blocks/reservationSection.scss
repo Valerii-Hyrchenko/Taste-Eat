@@ -1,0 +1,345 @@
+.reservation {
+    background-color: $base-dark;
+    padding-bottom: 75px;
+
+    @include adaptive590 {
+        padding-bottom: 65px;
+    }
+
+    @include adaptive430 {
+        padding-bottom: 25px;
+    }
+
+    &-bg {
+        margin: 0 auto;
+        max-width: 1440px;
+        line-height: 0;
+        position: relative;
+
+        &>img {
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        @include adaptive800 {
+            display: none;
+        }
+
+        &--fit {
+            display: none;
+
+            @include adaptive800 {
+                display: block;
+            }
+        }
+    }
+
+    &__content-wrapper {
+        position: relative;
+        padding: 140px 0;
+
+        @include adaptive1400 {
+            padding: 100px 0;
+        }
+
+        @include adaptive1300 {
+            padding: 70px 0;
+        }
+
+        @include adaptive1090 {
+            padding: 40px 0;
+        }
+
+        @include adaptive950 {
+            padding: 25px 0;
+        }
+
+        @include adaptive800 {
+            padding: 85px 0 230px;
+        }
+
+        @include adaptive730 {
+            padding: 80px 0 143px;
+        }
+
+        @include adaptive660 {
+            padding: 80px 0 53px;
+        }
+
+        @include adaptive590 {
+            padding: 50px 0 0;
+        }
+
+        @include adaptive500 {
+            padding-top: 40px;
+        }
+
+        @include adaptive390 {
+            padding-top: 20px;
+        }
+    }
+
+    &__content {
+        padding: 140px 140px 150px;
+        background-color: #292E36F2;
+        color: #FFFFFF;
+        width: 640px;
+
+        @include adaptive1400 {
+            padding: 120px 120px 130px;
+        }
+
+        @include adaptive1200 {
+            padding: 90px 100px;
+        }
+
+        @include adaptive1090 {
+            width: 545px;
+        }
+
+        @include adaptive950 {
+            padding: 60px 80px;
+        }
+
+        @include adaptive800 {
+            padding: 80px 40px 70px;
+        }
+
+        @include adaptive800 {
+            width: 400px;
+        }
+
+        @include adaptive550 {
+            width: 320px;
+            padding: 76px 40px 35px;
+        }
+
+        @include adaptive500 {
+            padding: 40px 40px 25px;
+        }
+
+        @include adaptive480 {
+            width: 280px;
+            padding-top: 35px;
+        }
+
+        @include adaptive390 {
+            padding: 20px 20px 15px;
+        }
+
+        @include adaptive360 {
+            padding: 20px 0 15px;
+        }
+        &-icon {
+            font-size: 15px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border-top: 1px solid $base-yellow;
+            border-bottom: 1px solid $base-yellow;
+            padding: 8px 0px 4px 5px;
+            width: 143px;
+            margin: 0 auto 11px;
+
+            @include adaptive430 {
+                margin-bottom: 0;
+                font-size: 14px;
+                width: 132px;
+                padding: 5px 0px 2px 5px;
+            }
+        }
+
+        &-title {
+            font-family: 'Cormorant Infant';
+            font-size: 40px;
+            line-height: 56px;
+            text-align: center;
+            letter-spacing: 0.2px;
+            text-transform: capitalize;
+            margin-bottom: 34px;
+
+            @include adaptive800 {
+                margin-bottom: 20px;
+            }
+
+            @include adaptive480 {
+                margin-bottom: 10px;
+            }
+            
+            @include adaptive360 {
+                font-size: 38px;
+                line-height: 42px;
+            }
+        }
+
+        &>form {
+            @include adaptive800 {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        &-input-large, &-input-small {
+            padding: 19px 5px 19px 23px;
+            background-color: transparent;
+            border: 1px solid rgb(133, 133, 133);
+            color: #FFFFFF;
+            outline: none;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            font-family: Josefin Sans;
+            font-size: 22px;
+            line-height: 33px;
+            letter-spacing: 0.2px;
+
+            @include adaptive1090 {
+                font-size: 18px;
+                padding: 14px 5px 14px 18px;
+                margin-bottom: 20px;
+            }
+
+            @include adaptive800 {
+                padding: 6px 3px 5px 8px;
+                font-size: 16px;
+            }
+
+            @include adaptive800 {
+                padding: 5px 3px 3px 7px;
+            }
+
+            @include adaptive360 {
+                padding: 3px 2px 2px 6px;
+            }
+        }
+        &-input-large::placeholder, &-input-small::placeholder {
+            color: #FFFFFF;
+        }
+
+        &-input-large {
+            width: 307px;
+            margin-right: 19px;
+
+            @include adaptive1090 {
+                width: 260px;
+            }
+
+            @include adaptive800 {
+                width: 300px;
+                margin: 0 auto 15px;
+            }
+
+            @include adaptive550 {
+                width: 250px;
+            }
+
+            @include adaptive480 {
+                width: 230px;
+            }
+
+            @include adaptive430 {
+                margin-bottom: 10px;
+            }
+
+            @include adaptive360 {
+                width: 200px;
+            }
+            
+            &:nth-of-type(2) {
+                margin-right: 0;
+
+                @include adaptive800 {
+                    margin: 0 auto 15px;
+                }
+
+                @include adaptive430 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &-input-small {
+            width: 198px;
+            margin-right: 16px;
+
+            @include adaptive1090 {
+                width: 167px;
+            }
+
+            @include adaptive800 {
+                width: 300px;
+                margin: 0 auto 15px;
+            }
+
+            @include adaptive550 {
+                width: 250px;
+            }
+
+            @include adaptive480 {
+                width: 230px;
+            }
+
+            @include adaptive430 {
+                margin-bottom: 10px;
+            }
+
+            @include adaptive360 {
+                width: 200px;
+            }
+
+            &:nth-of-type(5) {
+                margin-right: 0;
+
+                @include adaptive800 {
+                    margin: 0 auto 15px;
+                }
+
+                @include adaptive430 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &-button {
+            padding: 16px 54px 12px;
+            font-family: 'Josefin Sans';
+            font-size: 22px;
+            line-height: 33px;
+            letter-spacing: 0.2px;
+            color: #000000;
+            cursor: pointer;
+            display: block;
+            border: 1px solid #FFFFFF;
+            margin: 0 auto;
+            background-color: #FFFFFF;
+            transition: all 400ms linear;
+
+            @include adaptive1090 {
+                padding: 14px 40px 11px;
+            }
+
+            @include adaptive800 {
+                padding: 8px 30px 7px;
+                font-size: 18px;
+                margin-top: 15px;
+            }
+
+            @include adaptive480 {
+                padding: 7px 25px 5px;
+                font-size: 18px;
+                margin-top: 5px;
+            }
+
+            @include adaptive360 {
+                line-height: 23px;
+            }
+
+            &:hover {
+                color: #FFFFFF;
+                background-color: $base-yellow;
+                transition: all 400ms linear;
+            }
+        }
+    }
+}

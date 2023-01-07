@@ -1,0 +1,214 @@
+.feedback {
+  background-color: $base-dark;
+  padding-top: 140px;
+
+  @include adaptive1200 {
+    padding-top: 110px;
+  }
+
+  @include adaptive480 {
+    padding-top: 90px;
+  }
+
+  &__pre-slider {
+    &-icon {
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffffff;
+      border-top: 1px solid $base-yellow;
+      border-bottom: 1px solid $base-yellow;
+      box-sizing: border-box;
+      width: 141px;
+      padding: 8px 4px 4px;
+      margin-bottom: 12px;
+    }
+
+    &-title {
+      font-family: "Cormorant Infant";
+      font-size: 40px;
+      line-height: 56px;
+      letter-spacing: 0.2px;
+      text-transform: capitalize;
+      color: #ffffff;
+      padding: 0 0 8px 5px;
+    }
+
+    &-text {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.2px;
+      color: #ffffff;
+      padding: 0 0 80px 5px;
+
+      @include adaptive480 {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  &-slider {
+    padding-bottom: 230px;
+
+    @include adaptive1200 {
+      padding-bottom: 190px;
+    }
+
+    @include adaptive1090 {
+      max-width: 480px;
+    }
+
+    @include adaptive480 {
+      max-width: 360px;
+      padding-bottom: 150px;
+    }
+
+    @include adaptive360 {
+      max-width: 312px;
+    }
+
+    &__instance {
+      max-width: 444px;
+      padding: 0 50px;
+      background-color: rgb(52, 57, 66);
+
+      @include adaptive1200 {
+        max-width: 400px;
+      }
+
+      @include adaptive480 {
+        padding: 0 35px;
+      }
+
+      &-user {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        &-icon {
+          margin-right: 30px;
+
+          @include adaptive480 {
+            margin-right: 20px;
+            margin-top: 5px;
+            width: 80px;
+
+            & > img {
+              width: 100%;
+            }
+          }
+        }
+
+        &-name {
+          font-family: "Cormorant Infant";
+          font-size: 30px;
+          line-height: 42px;
+          letter-spacing: 0.2px;
+          color: #ffffff;
+
+          @include adaptive480 {
+            font-size: 26px;
+            line-height: 35px;
+          }
+        }
+
+        &-city {
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.2px;
+          color: $base-yellow;
+        }
+      }
+
+      &-text {
+        border-top: 1px solid $base-grey;
+        padding-top: 25px;
+        font-family: "Cormorant Infant";
+        font-size: 24px;
+        line-height: 38px;
+        letter-spacing: 0.25px;
+        color: #ffffff;
+
+        @include adaptive480 {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+    //slick-slider settings
+    .slick {
+      &-list {
+        overflow: hidden;
+      }
+
+      &-track {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-dots {
+        position: relative;
+
+        & > li {
+          position: absolute;
+          bottom: -80px;
+          left: 50%;
+          transform: translate(-50%);
+
+          &:first-child {
+            left: 48%;
+
+            @include adaptive1200 {
+              left: 47.6%;
+            }
+
+            @include adaptive1090 {
+              left: 45%;
+            }
+
+            @include adaptive480 {
+              left: 42.8%;
+            }
+          }
+
+          &:last-child {
+            left: 52%;
+
+            @include adaptive1090 {
+              left: 55%;
+            }
+
+            @include adaptive480 {
+              left: 57%;
+            }
+          }
+        }
+      }
+      &-dots li button {
+        width: 20px;
+        height: 20px;
+        font-size: 0;
+        border-radius: 50%;
+        border: transparent;
+        background-color: rgb(129, 131, 134);
+        transition: all 400ms linear;
+        cursor: pointer;
+      }
+
+      &-dots li.slick-active > button {
+        background-color: #ffffff;
+        transition: all 400ms linear;
+      }
+    }
+  }
+
+  &-lamps {
+    max-width: 1440px;
+    margin: 0 auto;
+    line-height: 0;
+    & > img {
+      width: 100%;
+    }
+  }
+}

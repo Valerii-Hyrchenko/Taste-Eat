@@ -1,0 +1,282 @@
+.menu {
+  padding: 140px 0;
+
+  @include adaptive1400 {
+    padding: 110px 0;
+  }
+
+  @include adaptive1200 {
+    padding: 80px 0;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+
+    @include adaptive1200 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &-icon {
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: $base-dark;
+    line-height: 0;
+    width: 63px;
+    border-top: 1px solid $base-yellow;
+    border-bottom: 1px solid $base-yellow;
+    text-align: center;
+    padding: 15px 5px 10px 4px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+  }
+
+  &__special-dishes {
+    &-title {
+      font-family: "Cormorant Infant";
+      font-size: 40px;
+      line-height: 56px;
+      letter-spacing: 0.2px;
+      text-transform: capitalize;
+      color: $base-dark;
+      padding: 0 0 13px 5px;
+
+      @include adaptive1200 {
+        text-align: center;
+      }
+    }
+
+    &-text {
+      width: 486px;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.2px;
+      color: $base-grey;
+      padding: 0 0 45px 8px;
+
+      @include adaptive1400 {
+        width: 400px;
+      }
+
+      @include adaptive1200 {
+        width: 730px;
+        margin-bottom: 0;
+      }
+
+      @include adaptive800 {
+        width: 500px;
+      }
+
+      @include adaptive550 {
+        width: 480px;
+      }
+
+      @include adaptive480 {
+        width: 356px;
+        font-size: 19px;
+        line-height: 28px;
+      }
+
+      @include adaptive360 {
+        width: 314px;
+      }
+    }
+
+    &-img {
+      @include adaptive1200 {
+        display: none;
+      }
+    }
+
+    &-button,
+    &-button--adaptive {
+      margin-top: 60px;
+
+      @include adaptive1200 {
+        display: none;
+      }
+
+      & > button {
+        padding: 20px 57px;
+        box-sizing: border-box;
+        background-color: transparent;
+        font-size: 22px;
+        line-height: 33px;
+        letter-spacing: 0.2px;
+        color: $base-yellow;
+        border: 2px solid $base-yellow;
+        font-family: "Josefin Sans";
+        transition: all 400ms linear;
+        cursor: pointer;
+
+        @include adaptive1400 {
+          padding: 18px 52px;
+        }
+
+        &:hover {
+          color: $base-dark;
+          background-color: $base-yellow;
+          transition: all 400ms linear;
+        }
+      }
+    }
+
+    &-button--adaptive {
+      display: none;
+
+      @include adaptive1200 {
+        display: block;
+      }
+
+      @include adaptive800 {
+        margin-top: 20px;
+
+        & > button {
+          padding: 14px 40px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  &-list {
+    margin-top: 35px;
+
+    &_group {
+      &:not(:nth-child(3)) {
+        margin-bottom: 75px;
+      }
+
+      &-title {
+        font-family: "Cormorant Infant";
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: 0.2px;
+        color: $base-dark;
+        margin-bottom: 40px;
+
+        @include adaptive550 {
+          margin-bottom: 30px;
+        }
+      }
+
+      &-dish {
+        display: flex;
+        margin-bottom: 50px;
+
+        @include adaptive550 {
+          align-items: center;
+          justify-content: center;
+        }
+
+        &-img {
+          margin-right: 20px;
+
+          @include adaptive550 {
+            margin-right: 10px;
+          }
+
+          & > img {
+            @include adaptive550 {
+              width: 70px;
+            }
+          }
+        }
+
+        &-name {
+          font-family: "Cormorant Infant";
+          font-size: 30px;
+          line-height: 42px;
+          letter-spacing: 0.2px;
+          color: $base-dark;
+          margin-bottom: -10px;
+
+          @include adaptive550 {
+            width: 275px;
+            font-size: 25px;
+            line-height: 27px;
+            font-weight: 800;
+          }
+
+          @include adaptive480 {
+            width: 225px;
+          }
+
+          @include adaptive360 {
+            width: 190px;
+            font-size: 22px;
+            line-height: 24px;
+          }
+        }
+
+        &-flex {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          width: 715px;
+
+          @include adaptive1400 {
+            width: 630px;
+          }
+
+          @include adaptive800 {
+            width: 444px;
+          }
+
+          @include adaptive550 {
+            width: 320px;
+            align-items: center;
+          }
+
+          @include adaptive480 {
+            width: 280px;
+            align-items: center;
+          }
+
+          @include adaptive360 {
+            width: 240px;
+          }
+
+          & > div {
+            width: 100%;
+            height: 2px;
+            background-color: #aaaaaa;
+            margin: 0 10px 5px;
+
+            @include adaptive800 {
+              display: none;
+            }
+          }
+        }
+
+        &-composition {
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.2px;
+          color: $base-grey;
+          white-space: nowrap;
+
+          @include adaptive550 {
+            white-space: unset;
+            font-size: 18px;
+            line-height: 20px;
+            margin-top: 15px;
+          }
+        }
+
+        &-price {
+          font-family: "Cormorant Infant";
+          font-size: 30px;
+          line-height: 42px;
+          letter-spacing: 0.2px;
+          color: $base-dark;
+
+          @include adaptive550 {
+            margin: 0 0 20px 10px;
+          }
+        }
+      }
+    }
+  }
+}

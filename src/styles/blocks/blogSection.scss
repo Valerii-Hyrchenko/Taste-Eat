@@ -1,0 +1,232 @@
+.blog {
+  padding: 140px 0;
+
+  @include adaptive1200 {
+    padding: 110px 0 70px;
+  }
+
+  @include adaptive800 {
+    padding: 90px 0 50px;
+  }
+
+  @include adaptive550 {
+    padding: 70px 0 8px 10px;
+  }
+
+  &-icon {
+    font-size: 15px;
+    letter-spacing: 3px;
+    color: $base-dark;
+    border-top: 1px solid $base-yellow;
+    border-bottom: 1px solid $base-yellow;
+    text-align: center;
+    padding: 8px 0px 4px 4px;
+    box-sizing: border-box;
+    margin: 0 auto 12px;
+    width: 60px;
+  }
+
+  &-title {
+    font-family: "Cormorant Infant";
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    color: $base-dark;
+    margin-bottom: 8px;
+
+    @include adaptive480 {
+      line-height: 46px;
+    }
+  }
+
+  &-text {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: $base-grey;
+    margin-bottom: 40px;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+
+    @include adaptive1200 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    @include adaptive1200 {
+      margin-bottom: 50px;
+    }
+    &-img {
+      position: relative;
+      line-height: 0;
+      max-width: 640px;
+
+      @include adaptive1400 {
+        max-width: 570px;
+      }
+
+      & > img {
+        @include adaptive1400 {
+          width: 100%;
+        }
+      }
+    }
+
+    &-button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.65);
+      transition: all 400ms linear;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0);
+        transition: all 400ms linear;
+      }
+
+      & > button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 22px;
+        line-height: 33px;
+        text-align: center;
+        font-family: "Josefin Sans";
+        letter-spacing: 0.44px;
+        color: $base-dark;
+        background-color: $base-yellow;
+        padding: 20px 57px;
+        border: transparent;
+        box-sizing: border-box;
+        transition: all 400ms linear;
+        cursor: pointer;
+
+        @include adaptive550 {
+          font-size: 18px;
+          line-height: 25px;
+          padding: 14px 40px;
+        }
+
+        @include adaptive480 {
+          font-size: 18px;
+          line-height: 20px;
+          padding: 12px 20px;
+        }
+
+        @include adaptive480 {
+          font-size: 17px;
+          padding: 11px 18px;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.65);
+          color: #ffffff;
+          font-weight: 900;
+          font-size: 26px;
+          padding: 20px 50px;
+          letter-spacing: 3px;
+          border: 4px solid $base-yellow;
+          transition: all 400ms linear;
+
+          @include adaptive1400 {
+            font-size: 24px;
+          }
+
+          @include adaptive550 {
+            font-size: 22px;
+            padding: 18px 45px;
+          }
+
+          @include adaptive480 {
+            font-size: 20px;
+            line-height: 22px;
+            padding: 16px 21px;
+          }
+
+          @include adaptive360 {
+            font-size: 18px;
+            line-height: 20px;
+            padding: 15px 17px;
+          }
+        }
+      }
+    }
+
+    &-icon {
+      display: flex;
+      margin-top: 50px;
+      margin-bottom: 26px;
+
+      @include adaptive1200 {
+        margin-top: 22px;
+        margin-bottom: 10px;
+      }
+
+      & > p:not(:last-child) {
+        margin-right: 30px;
+
+        @include adaptive480 {
+          margin-right: 40px;
+        }
+      }
+
+      & > p {
+        font-size: 15px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: $base-dark;
+        border-top: 1px solid $base-yellow;
+        border-bottom: 1px solid $base-yellow;
+        padding: 8px 0px 4px 5px;
+
+        @include adaptive480 {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-title {
+      font-family: "Cormorant Infant";
+      font-size: 30px;
+      line-height: 39px;
+      letter-spacing: 0.2px;
+      text-transform: capitalize;
+      color: $base-dark;
+      max-width: 502px;
+      margin-bottom: 24px;
+
+      @include adaptive1200 {
+        margin-bottom: 10px;
+      }
+
+      @include adaptive480 {
+        line-height: 36px;
+        font-weight: 600;
+      }
+    }
+
+    &-text {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.2px;
+      color: $base-grey;
+      max-width: 547px;
+
+      @include adaptive480 {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+.about-us {
+  background-color: $base-peach;
+
+  &__list-flex {
+    display: flex;
+    padding: 100px 0 60px;
+
+    & > div:not(:last-child) {
+      margin-right: 15px;
+
+      @include adaptive360 {
+        margin-right: 0;
+      }
+    }
+
+    @include adaptive1090 {
+      justify-content: space-between;
+      padding: 70px 0 40px;
+    }
+
+    @include adaptive550 {
+      flex-direction: column;
+      padding: 50px 0 30px 25px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    width: 443px;
+
+    @include adaptive550 {
+      margin-bottom: 20px;
+    }
+
+    &:last-of-type {
+      @include adaptive1090 {
+        display: none;
+      }
+
+      @include adaptive550 {
+        display: flex;
+      }
+    }
+
+    @include adaptive1200 {
+      width: 355px;
+    }
+
+    @include adaptive480 {
+      width: 320px;
+    }
+
+    @include adaptive360 {
+      width: 290px;
+    }
+
+    &-img {
+      margin-right: 20px;
+
+      @include adaptive1200 {
+        margin-right: 12px;
+        width: 22%;
+      }
+
+      @include adaptive360 {
+        margin-right: 8px;
+        width: 58px;
+      }
+
+      & > img {
+        @include adaptive1200 {
+          width: 100%;
+        }
+      }
+    }
+
+    &-title {
+      font-family: "Cormorant Infant";
+      font-size: 30px;
+      line-height: 39px;
+      letter-spacing: 0.2px;
+      color: $base-dark;
+      margin-bottom: 5px;
+
+      @include adaptive1200 {
+        font-size: 28px;
+        line-height: 35px;
+      }
+
+      @include adaptive360 {
+        font-size: 26px;
+        line-height: 28px;
+      }
+    }
+
+    &-info {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.2px;
+      color: $base-grey;
+
+      @include adaptive1200 {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      @include adaptive480 {
+        font-size: 16px;
+      }
+
+      @include adaptive360 {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__delicious-story {
+    padding: 84px 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include adaptive1400 {
+      width: 100%;
+      padding: 64px 0 110px;
+    }
+
+    @include adaptive1200 {
+      flex-direction: column-reverse;
+      padding: 34px 0 75px;
+    }
+
+    @include adaptive480 {
+      padding: 20px 0 65px;
+    }
+
+    &-img {
+      @include adaptive1400 {
+        width: 55%;
+      }
+
+      @include adaptive1200 {
+        width: 47%;
+      }
+
+      @include adaptive1090 {
+        width: 60%;
+      }
+
+      @include adaptive800 {
+        width: 80%;
+      }
+
+      @include adaptive480 {
+        width: 98%;
+        margin-top: 15px;
+      }
+
+      & > img {
+        @include adaptive1400 {
+          width: 100%;
+        }
+      }
+    }
+
+    &-info {
+      max-width: 570px;
+
+      &-title,
+      &-year {
+        font-family: "Cormorant Infant";
+        font-size: 40px;
+        line-height: 56px;
+        letter-spacing: 0.2px;
+        color: $base-dark;
+        margin-bottom: 15px;
+        padding-left: 8px;
+
+        @include adaptive1400 {
+          font-size: 38px;
+          line-height: 50px;
+          margin-bottom: 10px;
+        }
+      }
+
+      &-title {
+        @include adaptive1200 {
+          text-align: center;
+          font-size: 52px;
+          font-weight: 700;
+          margin-bottom: 25px;
+          padding-left: 0;
+        }
+
+        @include adaptive480 {
+          font-size: 42px;
+        }
+
+        @include adaptive360 {
+          font-size: 38px;
+        }
+      }
+
+      &-text,
+      &-signature > p {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+        color: $base-grey;
+        margin-bottom: 25px;
+        padding-left: 8px;
+
+        @include adaptive1400 {
+          font-size: 18px;
+          line-height: 26px;
+          margin-bottom: 15px;
+        }
+      }
+
+      &-signature > img {
+        padding-left: 8px;
+      }
+
+      &-text {
+        @include adaptive1400 {
+          max-width: 500px;
+          padding-left: 8px;
+        }
+
+        &--short {
+          @include adaptive1400 {
+            max-width: 235px;
+          }
+
+          @include adaptive360 {
+            font-size: 16px;
+            line-height: 24px;
+            max-width: 152px;
+          }
+        }
+      }
+
+      &-years {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}

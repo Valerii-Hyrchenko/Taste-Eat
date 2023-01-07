@@ -1,0 +1,132 @@
+.popular-dishes {
+    padding-bottom: 140px;
+
+    @include adaptive1400 {
+        padding-bottom: 110px;
+    }
+
+    @include adaptive1200 {
+        padding-bottom: 60px;
+    }
+
+    @include adaptive800 {
+        padding-bottom: 30px;
+    }
+
+    &-icon {
+        margin: 0 auto 12px;
+    }
+
+    &-title {
+        font-family: 'Cormorant Infant';
+        font-size: 40px;
+        line-height: 56px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        text-transform: capitalize;
+        color: $base-dark;
+        margin-bottom: 8px;
+
+        @include adaptive480 {
+            font-size: 36px;
+            line-height: 46px;
+        }
+    }
+
+    &-text {
+        font-size: 20px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: $base-grey;
+        max-width: 760px;
+        margin: 0 auto 50px;
+    }
+
+    &-flex {
+        display: flex;
+        justify-content: space-between;
+
+        @include adaptive1400 {
+            flex-wrap: wrap;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        @include adaptive800 {
+            justify-content: center;
+        }
+    }
+
+    &-item {
+        max-width: 318px;
+        @include adaptive1400 {
+            margin-bottom: 40px;
+        }
+
+        &-img {
+            @include adaptive480 {
+                width: 250px;
+                margin: 0 auto;
+
+                &>img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &-title, &-price {
+            font-family: 'Cormorant Infant';
+            font-size: 30px;
+            line-height: 42px;
+            letter-spacing: 0.2px;
+            color: $base-dark;
+            margin-bottom: 11px;
+
+            @include adaptive480 {
+                font-size: 26px;
+                line-height: 34px;
+            }
+        }
+
+        &-title {
+            @include adaptive480 {
+                margin-right: 40px;
+            }
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 0.2px;
+            color: $base-grey;
+            border-top: 1px solid rgb(220, 220, 220);
+            padding-top: 15px;
+
+            @include adaptive480 {
+                font-size: 18px;
+                line-height: 26px;
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+    }
+
+    &-item>div:last-of-type {
+        display: flex;
+        justify-content: space-between;
+
+        @include adaptive480 {
+            justify-content: center;
+        }
+    }
+
+    &-button {
+        margin: 60px auto 0;
+        max-width: 255px;
+
+        @include adaptive1400 {
+            margin-top: 10px;
+        }
+    }
+}

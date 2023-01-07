@@ -1,0 +1,132 @@
+.welcome {
+  background-color: $base-dark;
+  &-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include adaptive800 {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 30px;
+    }
+  }
+
+  &-title {
+    color: #ffffff;
+    font-family: "Cormorant Infant";
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 110px;
+    letter-spacing: 0.2px;
+    max-width: 470px;
+    padding: 0 8px 26px 8px;
+
+    @include adaptive1400 {
+      font-size: 90px;
+      line-height: 95px;
+    }
+
+    @include adaptive1200 {
+      font-size: 82px;
+      line-height: 85px;
+      max-width: 450px;
+    }
+
+    @include adaptive1090 {
+      font-size: 70px;
+      line-height: 70px;
+      margin-bottom: 16px;
+    }
+
+    @include adaptive360 {
+      font-size: 64px;
+    }
+  }
+
+  &-text {
+    color: #ffffff;
+    max-width: 616px;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+    padding: 0 8px 35px 8px;
+
+    @include adaptive1200 {
+      max-width: 450px;
+    }
+
+    @include adaptive1090 {
+      font-size: 20px;
+      line-height: 24px;
+      max-width: 378px;
+    }
+
+    @include adaptive800 {
+      text-align: left;
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+  }
+
+  &-button {
+    box-sizing: border-box;
+    padding: 20px 57px;
+    color: $base-yellow;
+    background-color: transparent;
+    font-family: "Josefin Sans";
+    border: 2px solid $base-yellow;
+    letter-spacing: 0.2px;
+    font-size: 22px;
+    line-height: 33px;
+    transition: all 400ms linear;
+    cursor: pointer;
+
+    @include adaptive1400 {
+      padding: 18px 50px;
+    }
+
+    @include adaptive1200 {
+      font-size: 20px;
+      padding: 16px 46px;
+    }
+
+    @include adaptive1090 {
+      padding: 12px 36px;
+    }
+
+    @include adaptive800 {
+      margin-bottom: 35px;
+    }
+
+    &:hover {
+      color: $base-dark;
+      background-color: $base-yellow;
+      transition: all 400ms linear;
+    }
+  }
+
+  &-picture {
+    @include adaptive1200 {
+      width: 55%;
+    }
+
+    @include adaptive800 {
+      width: 70%;
+    }
+
+    @include adaptive550 {
+      width: 80%;
+    }
+
+    @include adaptive480 {
+      width: 100%;
+    }
+
+    & > img {
+      @include adaptive1400 {
+        width: 100%;
+      }
+    }
+  }
+}

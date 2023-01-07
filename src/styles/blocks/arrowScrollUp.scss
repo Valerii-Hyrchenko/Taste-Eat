@@ -1,0 +1,37 @@
+.scroll-up-container {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  padding: 6px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 10;
+  line-height: 0;
+  border: 1px solid $base-dark;
+  cursor: pointer;
+  transition: 250ms all linear;
+
+  @include adaptive1090 {
+    right: 30px;
+    bottom: 30px;
+  }
+
+  @include adaptive550 {
+    right: 25px;
+    bottom: 25px;
+
+    & > div > img {
+      width: 30px;
+    }
+  }
+
+  @include adaptive480 {
+    right: 15px;
+    bottom: 20px;
+  }
+
+  &:hover {
+    filter: invert(80%);
+    transition: 250ms all linear;
+  }
+}
