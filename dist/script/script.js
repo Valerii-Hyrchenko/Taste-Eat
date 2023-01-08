@@ -1,33 +1,65 @@
 const scrollUpContainer = document.getElementById("scroll-up");
 
-$(".feedback-slider").slick({
-  arrows: false,
-  dots: true,
-  autoplay: true,
-  autoplaySpeed: 5000,
-  pauseOnHover: true,
-  adaptiveHeight: true,
-  slidesToShow: 2,
-  responsive: [
-    {
-      breakpoint: 1091,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-});
+const configScrollToSection = [
+  {
+    id: "menu",
+    button: document.getElementById("our-menu"),
+    toSection: document.getElementById("menu"),
+  },
+  {
+    id: "seeAllDishes",
+    button: document.getElementById("see-all-dishes"),
+    toSection: document.getElementById("menu"),
+  },
+  {
+    id: "welcomeButton",
+    button: document.getElementById("welcome-button"),
+    toSection: document.getElementById("popular-dishes"),
+  },
+  {
+    id: "home",
+    button: document.getElementById("home"),
+    toSection: document.getElementById("welcome"),
+  },
+  {
+    id: "aboutUs",
+    button: document.getElementById("about-us"),
+    toSection: document.getElementById("about-us-section"),
+  },
+  {
+    id: "pages",
+    button: document.getElementById("pages"),
+    toSection: document.getElementById("great-services"),
+  },
+  {
+    id: "blog",
+    button: document.getElementById("blog"),
+    toSection: document.getElementById("blog-section"),
+  },
+  {
+    id: "reservation",
+    button: document.getElementById("reservation-btn"),
+    toSection: document.getElementById("reservation"),
+  },
+  {
+    id: "contactUs",
+    button: document.getElementById("contact-us"),
+    toSection: document.getElementById("footer"),
+  },
+];
 
-const showBurgerMenu = () => {
-  let checkbox = document.getElementById("burger-checkbox");
-  let menu = document.getElementById("header-menu");
-  checkbox.addEventListener("click", (event) => {
-    event.target.checked
-      ? menu.classList.add("header-menu--burger")
-      : menu.classList.remove("header-menu--burger");
-  });
+const getHeaderHeight = () => {
+  return document.getElementById("header").clientHeight;
 };
-showBurgerMenu();
+
+configScrollToSection.forEach((item) => {
+  item.button.addEventListener("click", () => {
+    if (window.screen.width < 1091) {
+      item.toSection.style.scrollMarginTop = `${getHeaderHeight()}px`;
+    }
+    item.toSection.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+});
 
 const createScrollUp = () => {
   const scrollUpHtml = `
@@ -54,48 +86,31 @@ document.addEventListener("scroll", (event) => {
   }
 });
 
-const scrollToMenu = () => {
-  document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+const showBurgerMenu = () => {
+  let checkbox = document.getElementById("burger-checkbox");
+  let menu = document.getElementById("header-menu");
+  checkbox.addEventListener("click", (event) => {
+    event.target.checked
+      ? menu.classList.add("header-menu--burger")
+      : menu.classList.remove("header-menu--burger");
+  });
 };
+showBurgerMenu();
 
-document.getElementById("our-menu").addEventListener("click", scrollToMenu);
-
-document
-  .getElementById("see-all-dishes")
-  .addEventListener("click", scrollToMenu);
-
-document.getElementById("welcome-button").addEventListener("click", () => {
-  document
-    .getElementById("popular-dishes")
-    .scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("home").addEventListener("click", () => {
-  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-});
-
-document.getElementById("about-us").addEventListener("click", () => {
-  document
-    .getElementById("about-us-section")
-    .scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("pages").addEventListener("click", () => {
-  document
-    .getElementById("great-services")
-    .scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("blog").addEventListener("click", () => {
-  document
-    .getElementById("blog-section")
-    .scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("reservation-btn").addEventListener("click", () => {
-  document.getElementById("reservation").scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("contact-us").addEventListener("click", () => {
-  document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+$(".feedback-slider").slick({
+  arrows: false,
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  pauseOnHover: true,
+  adaptiveHeight: true,
+  slidesToShow: 2,
+  responsive: [
+    {
+      breakpoint: 1091,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });
