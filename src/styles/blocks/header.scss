@@ -292,6 +292,7 @@
     display: none;
     width: 50px;
     z-index: 3;
+    -webkit-tap-highlight-color: transparent;
 
     @include adaptive1090 {
       display: block;
