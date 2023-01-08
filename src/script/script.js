@@ -1,4 +1,6 @@
 const scrollUpContainer = document.getElementById("scroll-up");
+let burgerCheckbox = document.getElementById("burger-checkbox");
+let burgerMenu = document.getElementById("header-menu");
 
 const configScrollToSection = [
   {
@@ -58,6 +60,12 @@ configScrollToSection.forEach((item) => {
       item.toSection.style.scrollMarginTop = `${getHeaderHeight()}px`;
     }
     item.toSection.scrollIntoView({ block: "start", behavior: "smooth" });
+    if (burgerCheckbox.checked) {
+      setTimeout(() => {
+        burgerCheckbox.checked = false;
+        burgerMenu.classList.remove("header-menu--burger");
+      }, 400);
+    }
   });
 });
 
@@ -86,16 +94,11 @@ document.addEventListener("scroll", (event) => {
   }
 });
 
-const showBurgerMenu = () => {
-  let checkbox = document.getElementById("burger-checkbox");
-  let menu = document.getElementById("header-menu");
-  checkbox.addEventListener("click", (event) => {
-    event.target.checked
-      ? menu.classList.add("header-menu--burger")
-      : menu.classList.remove("header-menu--burger");
-  });
-};
-showBurgerMenu();
+burgerCheckbox.addEventListener("click", (event) => {
+  event.target.checked
+    ? burgerMenu.classList.add("header-menu--burger")
+    : burgerMenu.classList.remove("header-menu--burger");
+});
 
 $(".feedback-slider").slick({
   arrows: false,

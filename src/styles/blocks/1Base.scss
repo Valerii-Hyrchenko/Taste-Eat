@@ -1,132 +1,132 @@
-$base-yellow:#E1B168;
-$base-dark:#292E36;
-$base-light:#E5E5E5;
-$base-peach:#FFF8F5;
-$base-grey:rgb(92, 97, 104);
+$base-yellow: #e1b168;
+$base-dark: #292e36;
+$base-light: #e5e5e5;
+$base-peach: #fff8f5;
+$base-grey: rgb(92, 97, 104);
 
 body {
-    font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 @mixin adaptive1400 {
-    @media (max-width: 1400px) {
-        @content;
-    }
+  @media (max-width: 1400px) {
+    @content;
+  }
 }
 
 @mixin adaptive1200 {
-    @media (max-width: 1200px) {
-        @content;
-    }
+  @media (max-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin adaptive1300 {
-    @media (max-width: 1300px) {
-        @content;
-    }
+  @media (max-width: 1300px) {
+    @content;
+  }
 }
 
 @mixin adaptive1090 {
-    @media (max-width: 1090px) {
-        @content;
-    }
+  @media (max-width: 1090px) {
+    @content;
+  }
 }
 
 @mixin adaptive950 {
-    @media (max-width: 950px) {
-        @content;
-    }
+  @media (max-width: 950px) {
+    @content;
+  }
 }
 
 @mixin adaptive800 {
-    @media (max-width: 800px) {
-        @content;
-    }
+  @media (max-width: 800px) {
+    @content;
+  }
 }
 
 @mixin adaptive730 {
-    @media (max-width: 730px) {
-        @content;
-    }
+  @media (max-width: 730px) {
+    @content;
+  }
 }
 
 @mixin adaptive660 {
-    @media (max-width: 660px) {
-        @content;
-    }
+  @media (max-width: 660px) {
+    @content;
+  }
 }
 
 @mixin adaptive590 {
-    @media (max-width: 590px) {
-        @content;
-    }
+  @media (max-width: 590px) {
+    @content;
+  }
 }
 
 @mixin adaptive550 {
-    @media (max-width: 550px) {
-        @content;
-    }
+  @media (max-width: 550px) {
+    @content;
+  }
 }
 
 @mixin adaptive500 {
-    @media (max-width: 500px) {
-        @content;
-    }
+  @media (max-width: 500px) {
+    @content;
+  }
 }
 
 @mixin adaptive480 {
-    @media (max-width: 480px) {
-        @content;
-    }
+  @media (max-width: 480px) {
+    @content;
+  }
 }
 
 @mixin adaptive430 {
-    @media (max-width: 430px) {
-        @content;
-    }
+  @media (max-width: 430px) {
+    @content;
+  }
 }
 
 @mixin adaptive390 {
-    @media (max-width: 390px) {
-        @content;
-    }
+  @media (max-width: 390px) {
+    @content;
+  }
 }
 
 @mixin adaptive360 {
-    @media (max-width: 360px) {
-        @content;
-    }
+  @media (max-width: 360px) {
+    @content;
+  }
 }
 
 .container {
-    max-width: 1360px;
-    margin: 0 auto;
+  max-width: 1360px;
+  margin: 0 auto;
 
-    @include adaptive1400 {
-        max-width: 1200px;
-    }
+  @include adaptive1400 {
+    max-width: 1200px;
+  }
 
-    @include adaptive1200 {
-        max-width: 1090px;
-    }
+  @include adaptive1200 {
+    max-width: 1090px;
+  }
 
-    @include adaptive1090 {
-        max-width: 800px;
-    }
+  @include adaptive1090 {
+    max-width: 800px;
+  }
 
-    @include adaptive800 {
-        max-width: 550px;
-    }
+  @include adaptive800 {
+    max-width: 550px;
+  }
 
-    @include adaptive550 {
-        max-width: 480px;
-    }
+  @include adaptive550 {
+    max-width: 480px;
+  }
 
-    @include adaptive480 {
-        max-width: 360px;
-    }
+  @include adaptive480 {
+    max-width: 360px;
+  }
 
-    @include adaptive360 {
-        max-width: 320px;
-    }
+  @include adaptive360 {
+    max-width: 320px;
+  }
 }

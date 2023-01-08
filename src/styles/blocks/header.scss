@@ -97,6 +97,21 @@
       text-decoration: none;
 
       & > img {
+        animation-name: animation-logo;
+        animation-duration: 1.5s;
+        transition-timing-function: linear;
+        animation-delay: 0.8s;
+        @keyframes animation-logo {
+          0% {
+            opacity: 0;
+            transform: rotate3d(2, 1, 1, 0deg);
+          }
+          100% {
+            opacity: 1;
+            transform: rotate3d(1, 1, 1, 360deg);
+          }
+        }
+
         @include adaptive1200 {
           width: 300px;
         }
@@ -289,6 +304,11 @@
       left: 0;
       z-index: 1;
 
+      @include adaptive550 {
+        height: 29px;
+        width: 41px;
+      }
+
       & > div {
         position: absolute;
         width: 45px;
@@ -298,6 +318,11 @@
         display: inline-block;
         transition: 0.3s ease;
         left: 0;
+
+        @include adaptive550 {
+          height: 4px;
+          width: 40px;
+        }
       }
     }
 
@@ -309,6 +334,11 @@
       z-index: 5;
       margin: 0;
       cursor: pointer;
+
+      @include adaptive550 {
+        height: 29px;
+        width: 41px;
+      }
     }
 
     &-top {
@@ -317,6 +347,10 @@
 
     &-middle {
       top: 17px;
+
+      @include adaptive550 {
+        top: 12px;
+      }
     }
 
     &-bottom {
@@ -330,6 +364,11 @@
       left: 5px;
       background: $base-peach;
       box-shadow: 0 0 10px #495057;
+
+      @include adaptive550 {
+        width: 41px;
+        transform: rotate(45deg) translate(0, -2px);
+      }
     }
 
     &-checkbox:checked ~ &-wrapper > &-bottom {
@@ -339,6 +378,11 @@
       bottom: -1px;
       box-shadow: 0 0 10px #495057;
       background: $base-peach;
+
+      @include adaptive550 {
+        width: 41px;
+        transform: rotate(-47deg) translate(2px, 4px);
+      }
     }
 
     &-checkbox:checked ~ &-wrapper > &-middle {
