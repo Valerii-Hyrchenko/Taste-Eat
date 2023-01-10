@@ -16,7 +16,7 @@
       line-height: 22px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #ffffff;
+      color: $base-white;
       border-top: 1px solid $base-yellow;
       border-bottom: 1px solid $base-yellow;
       box-sizing: border-box;
@@ -31,7 +31,7 @@
       line-height: 56px;
       letter-spacing: 0.2px;
       text-transform: capitalize;
-      color: #ffffff;
+      color: $base-white;
       padding: 0 0 8px 5px;
     }
 
@@ -39,7 +39,7 @@
       font-size: 20px;
       line-height: 30px;
       letter-spacing: 0.2px;
-      color: #ffffff;
+      color: $base-white;
       padding: 0 0 80px 5px;
 
       @include adaptive480 {
@@ -71,7 +71,7 @@
     &__instance {
       max-width: 444px;
       padding: 0 50px;
-      background-color: rgb(52, 57, 66);
+      background-color: $base-dark;
 
       @include adaptive1200 {
         max-width: 400px;
@@ -105,7 +105,7 @@
           font-size: 30px;
           line-height: 42px;
           letter-spacing: 0.2px;
-          color: #ffffff;
+          color: $base-white;
 
           @include adaptive480 {
             font-size: 26px;
@@ -128,7 +128,7 @@
         font-size: 24px;
         line-height: 38px;
         letter-spacing: 0.25px;
-        color: #ffffff;
+        color: $base-white;
 
         @include adaptive480 {
           font-size: 20px;
@@ -191,13 +191,13 @@
         font-size: 0;
         border-radius: 50%;
         border: transparent;
-        background-color: rgb(129, 131, 134);
+        background-color: $base-grey;
         transition: all 400ms linear;
         cursor: pointer;
       }
 
       &-dots li.slick-active > button {
-        background-color: #ffffff;
+        background-color: $base-white;
         transition: all 400ms linear;
       }
     }

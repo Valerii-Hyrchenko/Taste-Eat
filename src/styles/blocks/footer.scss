@@ -1,351 +1,348 @@
 .footer {
-    background-color: $base-dark;
-    padding: 25px 0;
+  background-color: $base-dark;
+  padding: 25px 0;
 
-    @include adaptive480 {
-        padding-bottom: 10px;
+  @include adaptive480 {
+    padding-bottom: 10px;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include adaptive800 {
+      flex-direction: column;
+      align-items: center;
     }
 
-    &__logo {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
+    &-img > a {
+      text-decoration: none;
 
-        @include adaptive800 {
-            flex-direction: column;
-            align-items: center;
+      & > img {
+        @include adaptive1200 {
+          width: 300px;
         }
-
-        &-img>a {
-            text-decoration: none;
-
-            &>img {
-
-                @include adaptive1200 {
-                    width: 300px;
-                }
-
-                @include adaptive1090 {
-                    width: 250px;
-                }
-
-                @include adaptive480 {
-                    width: 200px;
-                }
-            }
-        }
-
-        &-hashtag {
-            font-size: 22px;
-            line-height: 33px;
-            letter-spacing: 0.2px;
-            color: #FFFFFF;
-            margin-bottom: 50px;
-
-            @include adaptive800 {
-                margin-bottom: 20px;
-            }
-
-            @include adaptive480 {
-                font-size: 18px;
-            }
-        }
-
-        &-social {
-            display: flex;
-            align-items: flex-start;
-            height: 150px;
-
-            &>div:not(:last-of-type) {
-                margin-right: 25px;
-
-                @include adaptive550 {
-                    margin-right: 15px;
-                }
-            }
-
-            &>div>a {
-                text-decoration: none;
-            }
-
-            &-instagram {
-                margin-top: 43px;
-            }
-
-            &-facebook {
-                margin-top: 67px;
-            }
-
-            &-pinterest {
-                margin-top: 91px;
-            }
-
-            &-twitter {
-                @include adaptive1090 {
-                    margin-top: 20px;
-                }
-            }
-        }
-    }
-
-    &__info {
-        display: flex;
-        justify-content: space-between;
-        color: #FFFFFF;
-        padding: 33px 0 50px;
 
         @include adaptive1090 {
-            justify-content: space-around;
-        }
-
-        @include adaptive800 {
-            padding: 20px 0 30px;
-        }
-
-        @include adaptive550 {
-            justify-content: space-between;
+          width: 250px;
         }
 
         @include adaptive480 {
-            flex-direction: column;
+          width: 200px;
         }
-
-        &-form-title {
-            font-size: 20px;
-            line-height: 30px;
-            text-align: center;
-            letter-spacing: 0.2px;
-            margin: 0 auto 25px;
-            max-width: 303px;
-        }
-
-        &-item {
-            padding-top: 20px;
-
-            &-icon {
-                font-size: 15px;
-                line-height: 21px;
-                letter-spacing: 3px;
-                text-transform: uppercase;
-                border-top: 1px solid $base-yellow;
-                border-bottom: 1px solid $base-yellow;
-                width: 94px;
-                margin-bottom: 30px;
-                padding: 4px 0 0 4px;
-
-                &--second {
-                    width: 176px;
-                    margin-left: 78px;
-
-                    @include adaptive550 {
-                        margin-left: 34px;
-                    }
-
-                    @include adaptive480 {
-                        margin-left: 0;
-                    }
-                }
-
-                @include adaptive550 {
-                    margin-bottom: 20px;
-                }
-            }
-
-            &-text {
-                font-size: 20px;
-                line-height: 30px;
-                letter-spacing: 0.2px;
-
-                &--yellow {
-                    color: $base-yellow;
-                }
-
-                @include adaptive800 {
-                    font-size: 18px;
-                    line-height: 24px;
-                }
-
-                @include adaptive550 {
-                    font-size: 16px;
-                    line-height: 22px;
-                }
-            }
-        }
-
-        &-second-item-wrapper {
-            text-align: right;
-
-            @include adaptive480 {
-                text-align: left;
-            }
-
-            &>p>span {
-                color: $base-yellow;
-            }
-        }
-
-        &-form-wrapper {
-
-            @include adaptive1090 {
-                display: none;
-            }
-
-            &--adaptive1090 {
-                display: none;
-
-                @include adaptive1090 {
-                    display: block;
-                    margin-top: 35px;
-                    color: #FFFFFF;
-
-                    @include adaptive800 {
-                        margin-top: 0;
-                    }
-
-                    &>form {
-                        margin: 0 auto;
-                        width: 500px;
-
-                        @include adaptive800 {
-                            width: 461px;
-                        }
-
-                        @include adaptive480 {
-                            width: 341px;
-                        }
-
-                        @include adaptive480 {
-                            width: 320px;
-                        }
-
-                        &>input {
-                            padding: 14px 5px 14px 18px;
-                            font-size: 20px;
-
-                            @include adaptive800 {
-                                padding: 6px 3px 5px 8px;
-                                font-size: 16px;
-                            }
-                        }
-
-                        &>button {
-                            padding: 14px 35px;
-                            font-size: 20px;
-
-                            @include adaptive800 {
-                                padding: 6px 25px;
-                                font-size: 16px;
-                            }
-                        }
-                    }
-
-                    &>p {
-                        @include adaptive800 {
-                            margin-bottom: 10px;
-                        }
-                    }
-
-                }
-            }
-        }
-
-        &-form {
-            width: 664px;
-            display: flex;
-
-            @include adaptive1200 {
-                width: 519px;
-            }
-            &>input {
-                padding: 17px 5px 17px 24px;
-                width: 456px;
-                font-family: 'Josefin Sans';
-                font-size: 22px;
-                line-height: 33px;
-                box-sizing: border-box;
-                letter-spacing: 0.2px;
-                outline: none;
-                background: transparent;
-                color: #FFFFFF;
-                border: 1px solid #FFFFFF;
-                border-right: transparent;
-
-                &::placeholder {
-                    color: #FFFFFF;
-                }
-
-                @include adaptive1200 {
-                    width: 340px;
-                    margin: 0 auto;
-                }
-
-                @include adaptive480 {
-                    width: 220px;
-                }
-
-                @include adaptive360 {
-                    width: 200px;
-                }
-            }
-
-            &>button {
-                padding: 17px 40px;
-                margin: 0;
-                border-left: transparent;
-
-                @include adaptive360 {
-                    padding: 16px 30px;
-                }
-            }
-        }
+      }
     }
 
-    &__contacts {
-        &-flex {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 26px;
-            font-size: 20px;
-            color: #FFFFFF;
-            line-height: 30px;
-            letter-spacing: 0.2px;
+    &-hashtag {
+      font-size: 22px;
+      line-height: 33px;
+      letter-spacing: 0.2px;
+      color: $base-white;
+      margin-bottom: 50px;
+
+      @include adaptive800 {
+        margin-bottom: 20px;
+      }
+
+      @include adaptive480 {
+        font-size: 18px;
+      }
+    }
+
+    &-social {
+      display: flex;
+      align-items: flex-start;
+      height: 150px;
+
+      & > div:not(:last-of-type) {
+        margin-right: 25px;
+
+        @include adaptive550 {
+          margin-right: 15px;
+        }
+      }
+
+      & > div > a {
+        text-decoration: none;
+      }
+
+      &-instagram {
+        margin-top: 43px;
+      }
+
+      &-facebook {
+        margin-top: 67px;
+      }
+
+      &-pinterest {
+        margin-top: 91px;
+      }
+
+      &-twitter {
+        @include adaptive1090 {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    color: $base-white;
+    padding: 33px 0 50px;
+
+    @include adaptive1090 {
+      justify-content: space-around;
+    }
+
+    @include adaptive800 {
+      padding: 20px 0 30px;
+    }
+
+    @include adaptive550 {
+      justify-content: space-between;
+    }
+
+    @include adaptive480 {
+      flex-direction: column;
+    }
+
+    &-form-title {
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      margin: 0 auto 25px;
+      max-width: 303px;
+    }
+
+    &-item {
+      padding-top: 20px;
+
+      &-icon {
+        font-size: 15px;
+        line-height: 21px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        border-top: 1px solid $base-yellow;
+        border-bottom: 1px solid $base-yellow;
+        width: 94px;
+        margin-bottom: 30px;
+        padding: 4px 0 0 4px;
+
+        &--second {
+          width: 176px;
+          margin-left: 78px;
+
+          @include adaptive550 {
+            margin-left: 34px;
+          }
+
+          @include adaptive480 {
+            margin-left: 0;
+          }
+        }
+
+        @include adaptive550 {
+          margin-bottom: 20px;
+        }
+      }
+
+      &-text {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.2px;
+
+        &--yellow {
+          color: $base-yellow;
+        }
+
+        @include adaptive800 {
+          font-size: 18px;
+          line-height: 24px;
+        }
+
+        @include adaptive550 {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    &-second-item-wrapper {
+      text-align: right;
+
+      @include adaptive480 {
+        text-align: left;
+      }
+
+      & > p > span {
+        color: $base-yellow;
+      }
+    }
+
+    &-form-wrapper {
+      @include adaptive1090 {
+        display: none;
+      }
+
+      &--adaptive1090 {
+        display: none;
+
+        @include adaptive1090 {
+          display: block;
+          margin-top: 35px;
+          color: $base-white;
+
+          @include adaptive800 {
+            margin-top: 0;
+          }
+
+          & > form {
+            margin: 0 auto;
+            width: 500px;
 
             @include adaptive800 {
-                font-size: 18px;
-                line-height: 24px;
-            }
-
-            @include adaptive550 {
-                font-size: 16px;
-                line-height: 22px;
+              width: 461px;
             }
 
             @include adaptive480 {
-                margin-top: 10px;
-                align-items: center;
+              width: 341px;
             }
 
-            &>ul {
-                display: flex;
-
-                @include adaptive480 {
-                    flex-direction: column;
-                }
-
-                &>li:not(:last-of-type) {
-                    margin-right: 20px;
-                }
-
-                &>li>a {
-                    text-decoration: none;
-                    color: $base-yellow;
-                }
+            @include adaptive480 {
+              width: 320px;
             }
-        }
 
-        &-line {
-            height: 1px;
-            background-color: $base-grey;
+            & > input {
+              padding: 14px 5px 14px 18px;
+              font-size: 20px;
+
+              @include adaptive800 {
+                padding: 6px 3px 5px 8px;
+                font-size: 16px;
+              }
+            }
+
+            & > button {
+              padding: 14px 35px;
+              font-size: 20px;
+
+              @include adaptive800 {
+                padding: 6px 25px;
+                font-size: 16px;
+              }
+            }
+          }
+
+          & > p {
+            @include adaptive800 {
+              margin-bottom: 10px;
+            }
+          }
         }
+      }
     }
+
+    &-form {
+      width: 664px;
+      display: flex;
+
+      @include adaptive1200 {
+        width: 519px;
+      }
+      & > input {
+        padding: 17px 5px 17px 24px;
+        width: 456px;
+        font-family: "Josefin Sans";
+        font-size: 22px;
+        line-height: 33px;
+        box-sizing: border-box;
+        letter-spacing: 0.2px;
+        outline: none;
+        background: transparent;
+        color: $base-white;
+        border: 1px solid $base-white;
+        border-right: transparent;
+
+        &::placeholder {
+          color: $base-white;
+        }
+
+        @include adaptive1200 {
+          width: 340px;
+          margin: 0 auto;
+        }
+
+        @include adaptive480 {
+          width: 220px;
+        }
+
+        @include adaptive360 {
+          width: 200px;
+        }
+      }
+
+      & > button {
+        padding: 17px 40px;
+        margin: 0;
+        border-left: transparent;
+
+        @include adaptive360 {
+          padding: 16px 30px;
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    &-flex {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 26px;
+      font-size: 20px;
+      color: $base-white;
+      line-height: 30px;
+      letter-spacing: 0.2px;
+
+      @include adaptive800 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      @include adaptive550 {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      @include adaptive480 {
+        margin-top: 10px;
+        align-items: center;
+      }
+
+      & > ul {
+        display: flex;
+
+        @include adaptive480 {
+          flex-direction: column;
+        }
+
+        & > li:not(:last-of-type) {
+          margin-right: 20px;
+        }
+
+        & > li > a {
+          text-decoration: none;
+          color: $base-yellow;
+        }
+      }
+    }
+
+    &-line {
+      height: 1px;
+      background-color: $base-grey;
+    }
+  }
 }

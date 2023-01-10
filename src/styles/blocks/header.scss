@@ -24,7 +24,7 @@
   }
 
   &-button {
-    color: #ffffff;
+    color: $base-white;
     text-align: center;
     padding: 20px 57px;
     font-weight: 400;
@@ -154,7 +154,7 @@
         position: relative;
         z-index: 5;
         cursor: pointer;
-        color: #ffffff;
+        color: $base-white;
         font-size: 20px;
         line-height: 30px;
         letter-spacing: 0.2px;
@@ -240,7 +240,7 @@
       left: 0;
       z-index: 2;
       padding-top: 90px;
-      background-color: rgba(92, 97, 104, 0.98);
+      background-color: $base-grey-bg;
       animation-name: set-opacity;
       animation-duration: 500ms;
       transition-timing-function: linear;
@@ -364,7 +364,7 @@
       transform-origin: top left;
       left: 5px;
       background: $base-peach;
-      box-shadow: 0 0 10px #495057;
+      box-shadow: 0 0 10px $base-dark-light;
 
       @include adaptive550 {
         width: 41px;
@@ -377,7 +377,7 @@
       transform: rotate(-46deg);
       transform-origin: top left;
       bottom: -1px;
-      box-shadow: 0 0 10px #495057;
+      box-shadow: 0 0 10px $base-dark-light;
       background: $base-peach;
 
       @include adaptive550 {

@@ -1,377 +1,376 @@
 .offers {
-    padding: 140px 0 120px;
+  padding: 140px 0 120px;
+
+  @include adaptive1400 {
+    padding: 110px 0 100px;
+  }
+
+  @include adaptive1400 {
+    padding: 100px 0 70px;
+  }
+
+  @include adaptive800 {
+    padding: 80px 0 50px;
+  }
+
+  @include adaptive550 {
+    padding: 70px 0 30px;
+  }
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+
+    @include adaptive1200 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &-icon {
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: $base-dark;
+    border-top: 1px solid $base-yellow;
+    border-bottom: 1px solid $base-yellow;
+    width: 76px;
+    margin: 0 auto 12px;
+    padding: 6px 5px 0px 7px;
+  }
+
+  &-title {
+    font-family: "Cormorant Infant";
+    font-size: 40px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    color: $base-dark;
+    margin-bottom: 8px;
+  }
+  &-text {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: $base-grey;
+    max-width: 813px;
+    margin: 0 auto 40px;
+  }
+  &__item {
+    position: relative;
+    padding: 40px;
 
     @include adaptive1400 {
-        padding: 110px 0 100px;
+      padding: 36px;
     }
 
-    @include adaptive1400 {
-        padding: 100px 0 70px;
+    @include adaptive1200 {
+      margin-bottom: 40px;
     }
 
-    @include adaptive800 {
-        padding: 80px 0 50px;
+    @include adaptive480 {
+      padding: 20px;
     }
 
-    @include adaptive550 {
-        padding: 70px 0 30px;
+    &-container {
+      display: flex;
+      position: relative;
+      z-index: 5;
     }
 
-    &-flex {
-        display: flex;
-        justify-content: space-between;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      line-height: 0;
 
-        @include adaptive1200 {
-            flex-direction: column;
-            align-items: center;
+      @include adaptive1400 {
+        width: 580px;
+      }
+
+      @include adaptive1200 {
+        width: 595px;
+      }
+
+      @include adaptive800 {
+        width: 550px;
+      }
+
+      @include adaptive550 {
+        width: 480px;
+      }
+
+      @include adaptive480 {
+        width: 360px;
+      }
+
+      @include adaptive360 {
+        width: 320px;
+      }
+
+      & > img {
+        @include adaptive1400 {
+          width: 100%;
         }
+      }
     }
-    &-icon {
+
+    &-info-price-container {
+      position: relative;
+    }
+
+    &-info-price-bg {
+      margin: 25px 0 0 -10px;
+
+      @include adaptive1400 {
+        width: 140px;
+        margin-top: 15px;
+      }
+
+      @include adaptive800 {
+        margin-top: 5px;
+      }
+
+      @include adaptive550 {
+        margin-top: -5px;
+      }
+
+      @include adaptive480 {
+        width: 110px;
+        margin-left: 0;
+      }
+
+      & > img {
+        @include adaptive1400 {
+          width: 100%;
+        }
+      }
+    }
+
+    &-info-price {
+      position: absolute;
+      top: 20px;
+      left: 34px;
+      z-index: 5;
+
+      @include adaptive1400 {
+        top: 15px;
+        left: 28px;
+      }
+
+      @include adaptive480 {
+        left: 30px;
+        top: 13px;
+      }
+
+      & > p:first-child {
         font-size: 15px;
-        line-height: 22px;
-        letter-spacing: 3px;
+        line-height: 10px;
+        letter-spacing: 0.15px;
         text-transform: uppercase;
         color: $base-dark;
-        border-top: 1px solid $base-yellow;
-        border-bottom: 1px solid $base-yellow;
-        width: 76px;
-        margin: 0 auto 12px;
-        padding: 6px 5px 0px 7px;
-    }
-
-    &-title {
-        font-family: 'Cormorant Infant';
-        font-size: 40px;
-        line-height: 56px;
-        text-align: center;
-        letter-spacing: 0.2px;
-        text-transform: capitalize;
-        color: $base-dark;
-        margin-bottom: 8px;
-    }
-    &-text {
-        font-size: 20px;
-        line-height: 30px;
-        text-align: center;
-        letter-spacing: 0.2px;
-        color: $base-grey;
-        max-width: 813px;
-        margin: 0 auto 40px;
-    }
-    &__item {
-        position: relative;
-        padding: 40px;
+        max-width: 48px;
+        margin: 0 auto;
 
         @include adaptive1400 {
-            padding: 36px;
-        }
-
-        @include adaptive1200 {
-            margin-bottom: 40px;
+          font-size: 12px;
+          padding-left: 10px;
         }
 
         @include adaptive480 {
-            padding: 20px;
+          font-size: 10px;
+        }
+      }
+
+      &--white > p:first-child {
+        color: $base-white;
+
+        @include adaptive1400 {
+          padding-left: 5px;
+        }
+      }
+
+      & > p:last-child {
+        font-family: "Cormorant Infant";
+        font-size: 60px;
+        letter-spacing: 0.2px;
+        color: $base-dark;
+
+        @include adaptive1400 {
+          font-size: 48px;
         }
 
-        &-container {
-            display: flex;
-            position: relative;
-            z-index: 5;
+        @include adaptive480 {
+          font-size: 37px;
+          line-height: 32px;
         }
+      }
 
-        &-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            line-height: 0;
+      &--white > p:last-child {
+        color: $base-white;
+      }
 
-            @include adaptive1400 {
-                width: 580px;
-            }
+      &--white {
+        left: 44px;
 
-            @include adaptive1200 {
-                width: 595px;
-            }
-
-            @include adaptive800 {
-                width: 550px;
-            }
-
-            @include adaptive550 {
-                width: 480px;
-            }
-
-            @include adaptive480 {
-                width: 360px;
-            }
-
-            @include adaptive360 {
-                width: 320px;
-            }
-
-            &>img {
-                @include adaptive1400 {
-                    width: 100%;
-                }
-            }
-
+        @include adaptive1400 {
+          left: 38px;
         }
-
-        &-info-price-container {
-            position: relative;
-        }
-
-        &-info-price-bg {
-            margin: 25px 0 0 -10px;
-
-            @include adaptive1400 {
-                width: 140px;
-                margin-top: 15px;
-            }
-
-            @include adaptive800 {
-                margin-top: 5px;
-            }
-
-            @include adaptive550 {
-                margin-top: -5px;
-            }
-
-            @include adaptive480 {
-                width: 110px;
-                margin-left: 0;
-            }
-
-            &>img {
-                @include adaptive1400 {
-                    width: 100%;
-                }
-            }
-        }
-
-        &-info-price {
-            position: absolute;
-            top: 20px;
-            left: 34px;
-            z-index: 5;
-
-            @include adaptive1400 {
-                top: 15px;
-                left: 28px;
-            }
-
-            @include adaptive480 {
-                left: 30px;
-                top: 13px;
-            }
-
-            &>p:first-child {
-                font-size: 15px;
-                line-height: 10px;
-                letter-spacing: 0.15px;
-                text-transform: uppercase;
-                color: $base-dark;
-                max-width: 48px;
-                margin: 0 auto;
-
-                @include adaptive1400 {
-                    font-size: 12px;
-                    padding-left: 10px;
-                }
-
-                @include adaptive480 {
-                    font-size: 10px;
-                }
-            }
-
-            &--white>p:first-child {
-                color: #FFFFFF;
-
-                @include adaptive1400 {
-                    padding-left: 5px;
-                }
-            }
-
-            &>p:last-child {
-                font-family: 'Cormorant Infant';
-                font-size: 60px;
-                letter-spacing: 0.2px;
-                color: $base-dark;
-
-                @include adaptive1400 {
-                    font-size: 48px;
-                }
-
-                @include adaptive480 {
-                    font-size: 37px;
-                    line-height: 32px;
-                }
-            }
-
-            &--white>p:last-child {
-                color: #FFFFFF;
-            }
-
-            &--white {
-                left: 44px;
-
-                @include adaptive1400 {
-                    left: 38px;
-                }
-            }
-        }
-
-        &-info-sale {
-            margin: 43px 0 8px;
-            font-size: 15px;
-            line-height: 22px;
-            letter-spacing: 4.5px;
-            text-transform: uppercase;
-            color: $base-dark;
-            border-top: 1px solid $base-dark;
-            border-bottom: 1px solid $base-dark;
-            padding: 7px 3px 0 7px;
-            max-width: 210px;
-
-            @include adaptive1400 {
-                font-size: 14px;
-                line-height: 16px;
-                letter-spacing: 3px;
-                padding: 7px 3px 4px 8px;
-                margin-top: 35px;
-                max-width: 180px;
-            }
-
-            @include adaptive550 {
-                margin-top: 20px;
-            }
-
-            @include adaptive480 {
-                font-size: 12px;
-                line-height: 14px;
-                margin-top: 18px;
-                max-width: 160px;
-            }
-
-            @include adaptive360 {
-                font-size: 11px;
-                padding: 6px 2px 2px 7px;
-                line-height: 12px;
-                margin-top: 10px;
-                margin-bottom: 5px;
-            }
-        }
-
-        &-info-title {
-            font-family: 'Cormorant Infant';
-            font-size: 40px;
-            line-height: 56px;
-            letter-spacing: 0.2px;
-            color: $base-dark;
-
-            @include adaptive1400 {
-                font-size: 36px;
-                line-height: 46px;
-            }
-
-            @include adaptive1200 {
-                font-size: 40px;
-                line-height: 56px;
-            }
-
-            @include adaptive800 {
-                font-size: 36px;
-                line-height: 46px;
-            }
-
-            @include adaptive550 {
-                font-size: 30px;
-                line-height: 40px;
-            }
-
-            @include adaptive480 {
-                font-size: 26px;
-                font-weight: 600;
-                line-height: 26px;
-            }
-
-            @include adaptive360 {
-                font-size: 25px;
-                line-height: 25px;
-            }
-        }
-
-        &-info-text {
-            font-size: 20px;
-            line-height: 30px;
-            letter-spacing: 0.2px;
-            color: $base-grey;
-            max-width: 245px;
-
-            @include adaptive1400 {
-                margin-top: 5px;
-                font-size: 20px;
-                line-height: 26px;
-            }
-
-            @include adaptive800 {
-                font-size: 18px;
-                line-height: 22px;
-            }
-
-            @include adaptive550 {
-                font-size: 16px;
-                line-height: 18px;
-                margin-right: -30px;
-            }
-
-            @include adaptive480 {
-                font-size: 14px;
-                line-height: 16px;
-            }
-
-            @include adaptive360 {
-                font-size: 13px;
-                line-height: 15px;
-            }
-        }
-
-        &-dish-img {
-            margin: 48px 0 0 24px;
-
-            @include adaptive1400 {
-                width: 280px;
-                margin-top: 20px;
-                margin-left: -15px;
-            }
-
-            @include adaptive1200 {
-                margin-left: -5px;
-            }
-
-            @include adaptive550 {
-                width: 240px;
-            }
-
-            @include adaptive480 {
-                width: 170px;
-            }
-
-            &>img {
-                @include adaptive1400 {
-                    width: 100%;
-                }
-            }
-
-            &--pizza {
-                margin-top: 27px;
-
-                @include adaptive1400 {
-                    margin-top: 0;
-                }
-            }
-        }
+      }
     }
+
+    &-info-sale {
+      margin: 43px 0 8px;
+      font-size: 15px;
+      line-height: 22px;
+      letter-spacing: 4.5px;
+      text-transform: uppercase;
+      color: $base-dark;
+      border-top: 1px solid $base-dark;
+      border-bottom: 1px solid $base-dark;
+      padding: 7px 3px 0 7px;
+      max-width: 210px;
+
+      @include adaptive1400 {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 3px;
+        padding: 7px 3px 4px 8px;
+        margin-top: 35px;
+        max-width: 180px;
+      }
+
+      @include adaptive550 {
+        margin-top: 20px;
+      }
+
+      @include adaptive480 {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 18px;
+        max-width: 160px;
+      }
+
+      @include adaptive360 {
+        font-size: 11px;
+        padding: 6px 2px 2px 7px;
+        line-height: 12px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+    }
+
+    &-info-title {
+      font-family: "Cormorant Infant";
+      font-size: 40px;
+      line-height: 56px;
+      letter-spacing: 0.2px;
+      color: $base-dark;
+
+      @include adaptive1400 {
+        font-size: 36px;
+        line-height: 46px;
+      }
+
+      @include adaptive1200 {
+        font-size: 40px;
+        line-height: 56px;
+      }
+
+      @include adaptive800 {
+        font-size: 36px;
+        line-height: 46px;
+      }
+
+      @include adaptive550 {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      @include adaptive480 {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 26px;
+      }
+
+      @include adaptive360 {
+        font-size: 25px;
+        line-height: 25px;
+      }
+    }
+
+    &-info-text {
+      font-size: 20px;
+      line-height: 30px;
+      letter-spacing: 0.2px;
+      color: $base-grey;
+      max-width: 245px;
+
+      @include adaptive1400 {
+        margin-top: 5px;
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      @include adaptive800 {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      @include adaptive550 {
+        font-size: 16px;
+        line-height: 18px;
+        margin-right: -30px;
+      }
+
+      @include adaptive480 {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      @include adaptive360 {
+        font-size: 13px;
+        line-height: 15px;
+      }
+    }
+
+    &-dish-img {
+      margin: 48px 0 0 24px;
+
+      @include adaptive1400 {
+        width: 280px;
+        margin-top: 20px;
+        margin-left: -15px;
+      }
+
+      @include adaptive1200 {
+        margin-left: -5px;
+      }
+
+      @include adaptive550 {
+        width: 240px;
+      }
+
+      @include adaptive480 {
+        width: 170px;
+      }
+
+      & > img {
+        @include adaptive1400 {
+          width: 100%;
+        }
+      }
+
+      &--pizza {
+        margin-top: 27px;
+
+        @include adaptive1400 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 }
