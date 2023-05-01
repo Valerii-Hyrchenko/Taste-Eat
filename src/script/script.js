@@ -100,6 +100,10 @@ burgerCheckbox.addEventListener("click", (event) => {
     : burgerMenu.classList.remove("header-menu--burger");
 });
 
+window.addEventListener("load", () => {
+  document.body.style.display = "block";
+});
+
 $(".feedback-slider").slick({
   arrows: false,
   dots: true,
