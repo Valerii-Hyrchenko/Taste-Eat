@@ -13,7 +13,7 @@ $base-white: #fff;
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  display: none;
+  visibility: hidden;
 }
 
 @mixin adaptive1400 {
