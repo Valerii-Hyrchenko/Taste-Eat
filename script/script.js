@@ -101,7 +101,7 @@ burgerCheckbox.addEventListener("click", (event) => {
 });
 
 window.addEventListener("load", () => {
-  document.body.style.display = "block";
+  document.body.style.visibility = "visible";
 });
 
 $(".feedback-slider").slick({
